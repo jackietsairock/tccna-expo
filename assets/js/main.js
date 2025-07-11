@@ -1,3 +1,63 @@
+const { ref, onMounted, computed } = Vue;
+const app = {
+    setup() {
+        const issue = ref([]);
+        const speakers = ref([]);
+        fetch('assets/js/data.json')
+            .then(res => res.json())
+            .then(data => {
+                issue.value = data.issue;
+                speakers.value = data.speaker;
+            });
+
+        const popupIsopen = ref(false);
+        let national = ref('');
+        let name = ref('');
+        let name_eng = ref('');
+        let img = ref('');
+        let title1 = ref('');
+        let title2 = ref('');
+        let academic = ref('');
+        let career = ref('');
+        let intro = ref('');
+        let day1_time = ref('');
+        let day1_speech_title1 = ref('');
+        let day1_speech_subtitle1 = ref('');
+
+        //講師彈跳視窗
+        function speaker_popup(id) {
+
+            let nowSpeaker=speakers.value.find(speaker => speaker.id === id);
+
+            national.value = nowSpeaker.national;
+            name.value = nowSpeaker.name;
+            name_eng.value = nowSpeaker.name_eng;
+            img.value = nowSpeaker.img;
+            title1.value = nowSpeaker.title1;
+            title2.value = nowSpeaker.title2;
+            academic.value = nowSpeaker.academic;
+            career.value = nowSpeaker.career;
+            intro.value = nowSpeaker.intro;
+            day1_time.value = nowSpeaker.day1_time;
+            day1_speech_title1.value = nowSpeaker.day1_speech_title1;
+            day1_speech_subtitle1.value = nowSpeaker.day1_speech_subtitle1;
+            
+            popupIsopen.value = true;
+        }
+        function speaker_close() {
+            popupIsopen.value = false;
+        }
+
+        return {
+            issue, speakers,
+            speaker_popup, speaker_close, popupIsopen,
+            national, img, name, name_eng, title1, title2, academic, career, intro, day1_time, day1_speech_title1, day1_speech_subtitle1
+        };
+    }
+};
+Vue.createApp(app).mount("#app");
+
+
 $(document).ready(function() {
     $('#status').fadeOut(); 
     $('#preloader').delay(500).fadeOut('slow'); 
