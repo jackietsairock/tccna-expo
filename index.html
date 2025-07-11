@@ -22,12 +22,14 @@
     <!-- css -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" type="text/css" media="screen, projection"  />
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"> -->
     <link href="assets/css/main.css" rel="stylesheet">
 
     <!-- js -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/quicklink.umd.js"></script>
@@ -91,7 +93,7 @@
                 </div>
                 
                 <div class="iphone-nav ">
-                <button class="iphone-nav-bur btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <button class="iphone-nav-bur btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
 
                     </button>
                     <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -606,44 +608,74 @@
                     講師陣容
                 </h3>
                 <div class="container p-4 d-flex flex-wrap justify-content-around">
-                    <div class="speaker col-3">
-                        <div class="speaker-info ">
-                            <p>中華經濟研究院副院長</p>
-                            <h5>王O全</h5>
-                            <a href="">more</a>
-                        </div>
-                        <div class="speaker-img">
-                            <img src="assets/images/speakers/speaker-1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speaker col-3">  
-                        <div class="speaker-info ">
-                            <p>中華經濟研究院副院長</p>
-                            <h5>王O全</h5>
-                            <a href="">more</a>
-                        </div>
-                        <div class="speaker-img">
-                            <img src="assets/images/speakers/speaker-2.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speaker col-3">
-                        <div class="speaker-info ">
-                            <p>中華經濟研究院副院長</p>
-                            <h5>王O全</h5>
-                            <a href="">more</a>
-                        </div>
-                        <div class="speaker-img">
-                            <img src="assets/images/speakers/speaker-1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="speaker col-3">  
-                        <div class="speaker-info ">
-                            <p>中華經濟研究院副院長</p>
-                            <h5>王O全</h5>
-                            <a href="">more</a>
-                        </div>
-                        <div class="speaker-img">
-                            <img src="assets/images/speakers/speaker-2.jpg" alt="">
+                    <div class="speaker_slider_area">
+                        <div class="speaker_swiper">
+                            <div class="speaker_slider_box">
+                                <!-- Slider main container -->
+                                <div class="swiper speaker_mySwiper">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide">
+                                            <div class="speaker">
+                                                <div class="speaker-info ">
+                                                    <p>中華經濟研究院副院長</p>
+                                                    <h5>王O全</h5>
+                                                    <a href="">more</a>
+                                                </div>
+                                                <div class="speaker-img">
+                                                    <img src="assets/images/speakers/speaker-1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="speaker">  
+                                                <div class="speaker-info ">
+                                                    <p>中華經濟研究院副院長</p>
+                                                    <h5>王O全</h5>
+                                                    <a href="">more</a>
+                                                </div>
+                                                <div class="speaker-img">
+                                                    <img src="assets/images/speakers/speaker-2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="speaker">
+                                                <div class="speaker-info ">
+                                                    <p>中華經濟研究院副院長</p>
+                                                    <h5>王O全</h5>
+                                                    <a href="">more</a>
+                                                </div>
+                                                <div class="speaker-img">
+                                                    <img src="assets/images/speakers/speaker-1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="speaker">  
+                                                <div class="speaker-info ">
+                                                    <p>中華經濟研究院副院長</p>
+                                                    <h5>王O全</h5>
+                                                    <a href="">more</a>
+                                                </div>
+                                                <div class="speaker-img">
+                                                    <img src="assets/images/speakers/speaker-2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1070,9 +1102,45 @@
 			</div>
 		</div>
 
+         <script>
+            function onResize() {
+                let window_width = window.innerWidth;
+                let slidesPerView;
+
+                if (window_width < 680) {
+                    slidesPerView = 1;
+                } else if (window_width < 768) {
+                    slidesPerView = 2;
+                } else if (window_width < 1000) {
+                    slidesPerView = 3;
+                } else {
+                    slidesPerView = 4;
+                }
+                    
+                // 更新 Swiper 的參數
+                if (typeof speaker_swiper !== 'undefined') {
+                    speaker_swiper.params.slidesPerView = slidesPerView;
+                    speaker_swiper.update();
+                }
+            }
+
+            window.addEventListener('resize', onResize);
+
+            let window_width = window.innerWidth;
+            let slidesPerView = window_width < 680 ? 1 : window_width < 768 ? 2 : window_width < 1000 ? 3 : 4;
+
+            const speaker_swiper = new Swiper(".speaker_mySwiper", {
+                slidesPerView: slidesPerView,
+                spaceBetween: 50,
+                loop: true,
+                navigation: {
+                    nextEl: ".speaker_slider_area .swiper-button-next",
+                    prevEl: ".speaker_slider_area .swiper-button-prev",
+                },
+            });
+        </script>
+
     </div>
 </body>
 </html>
-<script>
-    // new WOW().init();
-</script>
+
