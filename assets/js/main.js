@@ -1,16 +1,11 @@
-const { ref, onMounted, computed } = Vue;
+const { ref, onMounted, computed, watch, nextTick } = Vue;
 const app = {
     setup() {
         const issue = ref([]);
         const speakers = ref([]);
-        fetch('assets/js/data.json')
-            .then(res => res.json())
-            .then(data => {
-                issue.value = data.issue;
-                speakers.value = data.speaker;
-            });
 
         const popupIsopen = ref(false);
+        let swiper;       // 存 Swiper 實體
         let national = ref('');
         let name = ref('');
         let name_eng = ref('');
@@ -20,9 +15,42 @@ const app = {
         let academic = ref('');
         let career = ref('');
         let intro = ref('');
-        let day1_time = ref('');
-        let day1_speech_title1 = ref('');
-        let day1_speech_subtitle1 = ref('');
+
+        onMounted(() => {
+            fetch('assets/js/data.json')
+                .then(res => res.json())
+                .then(data => {
+                    speakers.value = data.speaker;
+                });
+            console.log('speakers:', speakers.value); // 除錯
+        });
+
+        // 2. 資料一改動 -> DOM 更新完 -> 初始化 / 更新 Swiper
+        watch(speakers, async () => {
+            await nextTick();            // 等 DOM 更新
+            console.log('speakers:', speakers.value); // 除錯
+            if (swiper) {
+                swiper.update();           // 已存在就刷新
+            } else {
+                swiper = new Swiper('.speaker_mySwiper', {
+                    slidesPerView: calcSlidesPerView(),
+                    spaceBetween: 50,
+                    loop: true,
+                    pagination: { el: '.speaker_slider_area .swiper-pagination', clickable: true },
+                    navigation: { nextEl: '.speaker_slider_area .swiper-button-next',
+                                prevEl: '.speaker_slider_area .swiper-button-prev' },
+                });
+                window.addEventListener('resize', () => {
+                    swiper.params.slidesPerView = calcSlidesPerView();
+                    swiper.update();
+                });
+            }
+        });
+
+        function calcSlidesPerView () {
+            const w = window.innerWidth;
+            return w < 680 ? 1 : w < 768 ? 2 : w < 1000 ? 3 : 4;
+        }
 
         //講師彈跳視窗
         function speaker_popup(id) {
@@ -38,9 +66,6 @@ const app = {
             academic.value = nowSpeaker.academic;
             career.value = nowSpeaker.career;
             intro.value = nowSpeaker.intro;
-            day1_time.value = nowSpeaker.day1_time;
-            day1_speech_title1.value = nowSpeaker.day1_speech_title1;
-            day1_speech_subtitle1.value = nowSpeaker.day1_speech_subtitle1;
             
             popupIsopen.value = true;
         }
@@ -51,7 +76,7 @@ const app = {
         return {
             issue, speakers,
             speaker_popup, speaker_close, popupIsopen,
-            national, img, name, name_eng, title1, title2, academic, career, intro, day1_time, day1_speech_title1, day1_speech_subtitle1
+            national, img, name, name_eng, title1, title2, academic, career, intro,
         };
     }
 };
@@ -141,68 +166,6 @@ $(document).ready(function() {
         }
     })
 
-    // slider
-    // $('.soho-slider').slick({
-    //     dots: true,
-    //     infinite: true,
-    //     autoplay: true,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 3,
-    //     centerPadding: 200,
-    //     autoplaySpeed: 3000,
-    //     centerMode: true,
-    //     responsive: [
-    //         {
-    //         breakpoint: 1200,
-    //         settings: {
-    //             slidesToShow: 2,
-    //             slidesToScroll: 2,
-    //             centerPadding: 300,
-    //             infinite: true,
-    //             dots: true
-    //         }
-    //         },
-    //         {
-    //         breakpoint: 600,
-    //         settings: {
-    //             slidesToShow: 1,
-    //             slidesToScroll: 1,
-    //             centerPadding: 200,
-    //             dots: false,
-    //         }
-    //         }
-    //     ]
-    // });
-
-    // $('.history-slider').slick({
-    //     dots: false,
-    //     infinite: true,
-    //     // autoplay: true,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 1,
-    //     centerPadding: 200,
-    //     autoplaySpeed: 3000,
-    //     centerMode: false,
-    //     responsive: [
-    //         {
-    //         breakpoint: 1200,
-    //         settings: {
-    //             slidesToShow: 2,
-    //             slidesToScroll: 2,
-    //             centerPadding: 300,
-    //             infinite: true
-    //         }
-    //         },
-    //         {
-    //         breakpoint: 600,
-    //         settings: {
-    //             slidesToShow: 1,
-    //             slidesToScroll: 1,
-    //             centerPadding: 200
-    //         }
-    //         }
-    //     ]
-    // });
 
     // right fixed area
     $('.go-to-top').on('click', function(e) {
