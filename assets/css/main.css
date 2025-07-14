@@ -701,6 +701,9 @@ footer{
 }
 
 /* speaker-popup */
+.speaker-popup-sec{
+    z-index: 9999;
+}
 .speaker-popup {
     display: none;
 }
@@ -1188,6 +1191,24 @@ footer{
     }
     .company-1 img{
         height: 40px;
+    }
+
+    /*swiper*/
+    .product1_swiper .swiper-button-next,.product1_swiper .swiper-rtl .swiper-button-prev{
+        right: var(--swiper-navigation-sides-offset, -40px);
+        left: auto;
+    }
+    .product1_swiper .swiper-button-prev,.product1_swiper .swiper-rtl .swiper-button-next{
+        left: var(--swiper-navigation-sides-offset, -40px);
+        right: auto;
+    }
+    .product2_swiper .swiper-button-next,.product2_swiper .swiper-rtl .swiper-button-prev{
+        right: var(--swiper-navigation-sides-offset, -40px);
+        left: auto;
+    }
+    .product2_swiper .swiper-button-prev,.product2_swiper .swiper-rtl .swiper-button-next{
+        left: var(--swiper-navigation-sides-offset, -40px);
+        right: auto;
     }
 
     /*speaker*/
