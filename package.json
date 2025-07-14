@@ -1,0 +1,24 @@
+{
+  "name": "tccna-expo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild assets/js/main.js --bundle --minify --outfile=dist/main.bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackietsairock/tccna-expo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackietsairock/tccna-expo/issues"
+  },
+  "homepage": "https://github.com/jackietsairock/tccna-expo#readme",
+  "description": "",
+  "devDependencies": {
+    "esbuild": "^0.25.6"
+  }
+}
