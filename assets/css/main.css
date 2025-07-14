@@ -1251,7 +1251,7 @@ footer{
     }
     .kvbn{
         height: 100vh;
-        background: url(../images/bg-2.jpg) fixed center center no-repeat;
+        background: url(../images/bg-2.jpg) center center no-repeat;
         background-size: cover;
     }
     header .nav{
