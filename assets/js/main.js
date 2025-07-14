@@ -22,13 +22,11 @@ const app = {
                 .then(data => {
                     speakers.value = data.speaker;
                 });
-            console.log('speakers:', speakers.value); // 除錯
         });
 
         // 2. 資料一改動 -> DOM 更新完 -> 初始化 / 更新 Swiper
         watch(speakers, async () => {
             await nextTick();            // 等 DOM 更新
-            console.log('speakers:', speakers.value); // 除錯
             if (swiper) {
                 swiper.update();           // 已存在就刷新
             } else {

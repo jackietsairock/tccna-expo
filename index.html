@@ -2,22 +2,22 @@
 <html lang="zh-TW">
 <head>
     <meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<link rel="Shortcut Icon" href="https://www.businesstoday.com.tw/lazyweb/web/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="Shortcut Icon" href="https://www.businesstoday.com.tw/lazyweb/web/img/favicon.ico">
     <!--清cache -start-->
-	<meta http-equiv="pragma" content="no-cache" />
-	<meta http-equiv="content-type" content="no-cache, must-revalidate" />
-	<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT" />
-	<!--清cache -end-->
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="content-type" content="no-cache, must-revalidate" />
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT" />
+    <!--清cache -end-->
 
     <!--SEO-->
-	<meta name="keywords" content="">
-	<meta name="description" content="">
-	<meta property="og:title" content="夢想 • 富足  熟齡生活提案 | 2023第七屆幸福熟齡臺日交流論壇">
-	<meta property="og:type" content="website">
-	<meta property="og:description" content="">
-	<!-- <meta property="og:image" content="https://events.businesstoday.com.tw/2023/happiness_mature_age/assets/images/og-image.jpg"> -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta property="og:title" content="夢想 • 富足  熟齡生活提案 | 2023第七屆幸福熟齡臺日交流論壇">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="">
+    <!-- <meta property="og:image" content="https://events.businesstoday.com.tw/2023/happiness_mature_age/assets/images/og-image.jpg"> -->
 
     <!-- css -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -30,7 +30,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/quicklink.umd.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script> -->
    
@@ -106,16 +106,16 @@
                         </div>
                         <div class="offcanvas-body">
                             <ul class="iphone-nav justify-content-center ">
-                                <li class="iphone-nav-item d-block p-3">
+                                <li class="iphone-nav-item d-block p-3" data-bs-dismiss="offcanvas">
                                     <a class="iphone-nav-link" aria-current="page" href="#intro">關於博覽會</a>
                                 </li>
-                                <li class="iphone-nav-item  d-block p-3">
+                                <li class="iphone-nav-item  d-block p-3" data-bs-dismiss="offcanvas">
                                     <a class="iphone-nav-link" href="#gift">大會好禮</a>
                                 </li>
-                                <li class="iphone-nav-item  d-block p-3">
+                                <li class="iphone-nav-item  d-block p-3" data-bs-dismiss="offcanvas">
                                     <a class="iphone-nav-link" href="#signUp">報名參加</a>
                                 </li>
-                                <li class="iphone-nav-item  d-block p-3">
+                                <li class="iphone-nav-item  d-block p-3" data-bs-dismiss="offcanvas">
                                     <a class="iphone-nav-link" href="#salon">沙龍講座</a>
                                 </li>
                             </ul>
@@ -1090,108 +1090,110 @@
         </footer>
 
         <!---------------------------------- 講者　彈跳視窗 ----------------------------------->
-		<div class="speaker-popup-sec" id="popupData">
-			<div class="speaker-popup" :class="{active:popupIsopen}">
-				<div class="speaker-popup-bg">
-					<div class="speaker-popup-content">
-						<div class="close-sec">
-							<div class="popup-close" @click="speaker_close">×</div>
-						</div>
-						<div class="popup-top">
-							<div class="top-img">
-								<img :src="img" alt="">
-							</div>
-							<div class="speaker-detail">
-								<h2 class="national">{{national}}</h2>
-								<div class="speaker_name">{{name}}</div>
-								<div class="name_eng">{{name_eng}}</div>
-								<div class="speaker-title" v-html="title1+title2"></div>
-								<br>
-								<div class="career" v-html="career"></div>
-								<br>
-								<div class="academic" v-html="academic"></div>
-								<br>
-								<div class="intro" v-html="intro"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-        <script src="assets/js/main.js"></script>
-        <script>
-            function onResize() {
-                let window_width = window.innerWidth;
-                let slidesPerView;
-
-                if (window_width < 680) {
-                    slidesPerView = 1;
-                } else if (window_width < 768) {
-                    slidesPerView = 2;
-                } else if (window_width < 1000) {
-                    slidesPerView = 3;
-                } else {
-                    slidesPerView = 4;
-                }
-                    
-                // 更新 Swiper 的參數
-                if (typeof product1_swiper !== 'undefined') {
-                    product1_swiper.params.slidesPerView = slidesPerView;
-                    product1_swiper.update();
-                }
-            }
-
-            function onResize2() {
-                let window_width = window.innerWidth;
-                let slidesPerView;
-
-                if (window_width < 680) {
-                    slidesPerView = 1;
-                } else if (window_width < 768) {
-                    slidesPerView = 2;
-                } else if (window_width < 1000) {
-                    slidesPerView = 3;
-                } else {
-                    slidesPerView = 4;
-                }
-                    
-                // 更新 Swiper 的參數
-                if (typeof product2_swiper !== 'undefined') {
-                    product2_swiper.params.slidesPerView = slidesPerView;
-                    product2_swiper.update();
-                }
-            }
-
-            window.addEventListener('resize', onResize);
-            window.addEventListener('resize', onResize2);
-
-            let window_width = window.innerWidth;
-            let slidesPerView = window_width < 680 ? 1 : window_width < 768 ? 2 : window_width < 1000 ? 3 : 4;
-
-            const product1_swiper = new Swiper(".product1_mySwiper", {
-                slidesPerView: slidesPerView,
-                spaceBetween: 50,
-                loop: true,
-                navigation: {
-                    nextEl: ".product1_slider_area .swiper-button-next",
-                    prevEl: ".product1_slider_area .swiper-button-prev",
-                },
-            });
-
-            const product2_swiper = new Swiper(".product2_mySwiper", {
-                slidesPerView: slidesPerView,
-                spaceBetween: 50,
-                loop: true,
-                navigation: {
-                    nextEl: ".product2_slider_area .swiper-button-next",
-                    prevEl: ".product2_slider_area .swiper-button-prev",
-                },
-            });
-        </script>
+        <div class="speaker-popup-sec" id="popupData">
+            <div class="speaker-popup" :class="{active:popupIsopen}">
+                <div class="speaker-popup-bg">
+                    <div class="speaker-popup-content">
+                        <div class="close-sec">
+                            <div class="popup-close" @click="speaker_close">×</div>
+                        </div>
+                        <div class="popup-top">
+                            <div class="top-img">
+                                <img :src="img" alt="">
+                            </div>
+                            <div class="speaker-detail">
+                                <h2 class="national">{{national}}</h2>
+                                <div class="speaker_name">{{name}}</div>
+                                <div class="name_eng">{{name_eng}}</div>
+                                <div class="speaker-title" v-html="title1+title2"></div>
+                                <br>
+                                <div class="career" v-html="career"></div>
+                                <br>
+                                <div class="academic" v-html="academic"></div>
+                                <br>
+                                <div class="intro" v-html="intro"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
 
     </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function onResize() {
+            let window_width = window.innerWidth;
+            let slidesPerView;
+
+            if (window_width < 680) {
+                slidesPerView = 1;
+            } else if (window_width < 768) {
+                slidesPerView = 2;
+            } else if (window_width < 1000) {
+                slidesPerView = 3;
+            } else {
+                slidesPerView = 4;
+            }
+                
+            // 更新 Swiper 的參數
+            if (typeof product1_swiper !== 'undefined') {
+                product1_swiper.params.slidesPerView = slidesPerView;
+                product1_swiper.update();
+            }
+        }
+
+        function onResize2() {
+            let window_width = window.innerWidth;
+            let slidesPerView;
+
+            if (window_width < 680) {
+                slidesPerView = 1;
+            } else if (window_width < 768) {
+                slidesPerView = 2;
+            } else if (window_width < 1000) {
+                slidesPerView = 3;
+            } else {
+                slidesPerView = 4;
+            }
+                
+            // 更新 Swiper 的參數
+            if (typeof product2_swiper !== 'undefined') {
+                product2_swiper.params.slidesPerView = slidesPerView;
+                product2_swiper.update();
+            }
+        }
+
+        window.addEventListener('resize', onResize);
+        window.addEventListener('resize', onResize2);
+
+        let window_width = window.innerWidth;
+        let slidesPerView = window_width < 680 ? 1 : window_width < 768 ? 2 : window_width < 1000 ? 3 : 4;
+
+        const product1_swiper = new Swiper(".product1_mySwiper", {
+            slidesPerView: slidesPerView,
+            spaceBetween: 50,
+            loop: true,
+            navigation: {
+                nextEl: ".product1_slider_area .swiper-button-next",
+                prevEl: ".product1_slider_area .swiper-button-prev",
+            },
+        });
+
+        const product2_swiper = new Swiper(".product2_mySwiper", {
+            slidesPerView: slidesPerView,
+            spaceBetween: 50,
+            loop: true,
+            navigation: {
+                nextEl: ".product2_slider_area .swiper-button-next",
+                prevEl: ".product2_slider_area .swiper-button-prev",
+            },
+        });
+    </script>
+
 </body>
 </html>
 
