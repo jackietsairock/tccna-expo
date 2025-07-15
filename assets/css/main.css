@@ -1262,6 +1262,10 @@ footer{
         background: url(../images/city-3.jpg) center center no-repeat;
         background-size: cover;
     }
+    .ctiy-bg5{
+        background: url(../images/city-5.jpg) center center no-repeat;
+        background-size: cover;
+    }
     .ctiy-bg6{
         background: url(../images/city-6.jpg) center center no-repeat;
         background-size: cover;
