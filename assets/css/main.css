@@ -1254,6 +1254,18 @@ footer{
         background: url(../images/bg-2.jpg) center center no-repeat;
         background-size: cover;
     }
+    .ctiy-bg1{
+        background: url(../images/city-1.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    .ctiy-bg3{
+        background: url(../images/city-3.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    .ctiy-bg6{
+        background: url(../images/city-6.jpg) center center no-repeat;
+        background-size: cover;
+    }
     header .nav{
         display: none
     }
