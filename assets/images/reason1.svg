@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 80.52 42.92">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_未命名漸層_42);
+      }
+
+      .cls-2 {
+        fill: url(#_未命名漸層_42-8);
+      }
+
+      .cls-3 {
+        fill: url(#_未命名漸層_42-9);
+      }
+
+      .cls-4 {
+        fill: url(#_未命名漸層_42-6);
+      }
+
+      .cls-5 {
+        fill: url(#_未命名漸層_42-5);
+      }
+
+      .cls-6 {
+        fill: url(#_未命名漸層_42-3);
+      }
+
+      .cls-7 {
+        fill: url(#_未命名漸層_42-2);
+      }
+
+      .cls-8 {
+        fill: url(#_未命名漸層_42-4);
+      }
+
+      .cls-9 {
+        fill: url(#_未命名漸層_42-7);
+      }
+
+      .cls-10 {
+        fill: url(#_未命名漸層_42-10);
+      }
+
+      .cls-11 {
+        fill: url(#_未命名漸層_42-11);
+      }
+    </style>
+    <linearGradient id="_未命名漸層_42" data-name="未命名漸層 42" x1="10.64" y1="41.66" x2="10.64" y2="1.09" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#62b5cd"/>
+      <stop offset=".22" stop-color="#5198bf"/>
+      <stop offset=".56" stop-color="#3a71ad"/>
+      <stop offset=".83" stop-color="#2c58a2"/>
+      <stop offset="1" stop-color="#27509e"/>
+    </linearGradient>
+    <linearGradient id="_未命名漸層_42-2" data-name="未命名漸層 42" x1="25.33" y1="41.66" x2="25.33" y2="1.1" xlink:href="#_未命名漸層_42"/>
+    <linearGradient id="_未命名漸層_42-3" data-name="未命名漸層 42" x1="40.03" y1="41.66" x2="40.03" y2="1.1" xlink:href="#_未命名漸層_42"/>
+    <linearGradient id="_未命名漸層_42-4" data-name="未命名漸層 42" x1="54.72" y1="41.66" x2="54.72" y2="1.1" xlink:href="#_未命名漸層_42"/>
+    <linearGradient id="_未命名漸層_42-5" data-name="未命名漸層 42" x1="69.41" y1="41.66" x2="69.41" y2="1.1" xlink:href="#_未命名漸層_42"/>
+    <linearGradient id="_未命名漸層_42-6" data-name="未命名漸層 42" x1="10.64" y1="41.66" x2="10.64" y2="1.1" xlink:href="#_未命名漸層_42"/>
+    <linearGradient id="_未命名漸層_42-7" data-name="未命名漸層 42" x1="25.33" y1="41.66" x2="25.33" y2="1.1" xlink:href="#_未命名漸層_42"/>
+    <linearGradient id="_未命名漸層_42-8" data-name="未命名漸層 42" x1="40.03" y1="41.66" x2="40.03" y2="1.1" xlink:href="#_未命名漸層_42"/>
+    <linearGradient id="_未命名漸層_42-9" data-name="未命名漸層 42" x1="54.72" y1="41.66" x2="54.72" y2="1.1" xlink:href="#_未命名漸層_42"/>
+    <linearGradient id="_未命名漸層_42-10" data-name="未命名漸層 42" x1="69.41" y1="41.66" x2="69.41" y2="1.1" xlink:href="#_未命名漸層_42"/>
+    <linearGradient id="_未命名漸層_42-11" data-name="未命名漸層 42" x1="40.12" y1="41.66" x2="40.12" y2="1.1" xlink:href="#_未命名漸層_42"/>
+  </defs>
+  <rect class="cls-1" x="6.65" y="32.17" width="7.97" height="10.14"/>
+  <rect class="cls-7" x="21.34" y="26.87" width="7.97" height="15.44"/>
+  <rect class="cls-6" x="36.04" y="11.94" width="7.97" height="30.37"/>
+  <rect class="cls-8" x="50.73" y="27.12" width="7.97" height="15.19"/>
+  <rect class="cls-5" x="65.43" y="16.68" width="7.97" height="25.63"/>
+  <path class="cls-4" d="M13.48,23.38c0,1.57-1.27,2.84-2.84,2.84s-2.84-1.27-2.84-2.84,1.27-2.84,2.84-2.84,2.84,1.27,2.84,2.84Z"/>
+  <path class="cls-9" d="M28.17,18.26c0,1.57-1.27,2.84-2.84,2.84s-2.84-1.27-2.84-2.84,1.27-2.84,2.84-2.84,2.84,1.27,2.84,2.84Z"/>
+  <path class="cls-2" d="M42.86,3.4c0,1.57-1.27,2.84-2.84,2.84s-2.84-1.27-2.84-2.84,1.27-2.84,2.84-2.84,2.84,1.27,2.84,2.84Z"/>
+  <path class="cls-3" d="M57.56,18.45c0,1.57-1.27,2.84-2.84,2.84s-2.84-1.27-2.84-2.84,1.27-2.84,2.84-2.84,2.84,1.27,2.84,2.84Z"/>
+  <path class="cls-10" d="M72.25,7.82c0,1.57-1.27,2.84-2.84,2.84s-2.84-1.27-2.84-2.84,1.27-2.84,2.84-2.84,2.84,1.27,2.84,2.84Z"/>
+  <polygon class="cls-11" points="10.87 24.04 10.41 22.72 24.95 17.66 40.03 2.41 54.8 17.53 69 7.25 69.82 8.38 54.64 19.37 40.02 4.4 25.71 18.87 25.56 18.92 10.87 24.04"/>
+</svg>

@@ -286,6 +286,9 @@ header .nav-link:focus,.nav-link:hover {
     background-color:  #cccccc27;
 }
 .iphone-nav-item:hover a,  .iphone-nav-item:focus a{
+    display: block;
+    width: 100%;
+    height: 100%;
     color: #f5514c;
 
 }
@@ -335,8 +338,8 @@ header .nav-link:focus,.nav-link:hover {
     position: relative;
 }
 .about-icon{
-    width:38px;
-    height:38px;
+    width:100px;
+    height:100px;
     margin: 0 auto;
     margin-bottom: 4px;
 }
@@ -348,10 +351,28 @@ header .nav-link:focus,.nav-link:hover {
 .about-form{
     font-size: 0.9em;
     margin: 2rem auto;
+    justify-content: center;
 }
 .about-form li{
-    list-style-type:disc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type:none;
     color: #f5514c;
+    margin: 1rem 0 3rem 0;
+    padding: 0 2rem;
+    border-right: 1px solid #28539E;
+    text-align: justify;
+}
+.about-form li:last-child{
+    border-right: 0;
+}
+.about-form li img{
+    position: relative;
+    display: block;
+    width: 70%;
+    margin: 0 auto 2rem auto;
+    text-align: center;
 }
 .about-form li p{
     color: #333333;
@@ -360,6 +381,35 @@ header .nav-link:focus,.nav-link:hover {
     max-width: 1340px;
     width: 90%;
 
+}
+
+.about_signUp_button{
+    position: relative;
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.6rem 2rem;
+    border-radius: 30px;
+    background: #c1272d;
+    text-shadow: 0 2px 8px #c1272d;
+}
+.about_signUp_button::after{
+    content: "";
+    position: absolute;
+    width: 97%;
+    height: 80%;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    margin: auto;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    z-index: 1;
+}
+.about_signUp_button:hover{
+    background: #fcd705;
+    cursor: pointer;
 }
 
 /*events*/
@@ -686,11 +736,19 @@ header .nav-link:focus,.nav-link:hover {
     width: auto;
     height: 40px;
 }
+.company-1{
+    gap: 2rem;
+    
+}
 .company-1 .companytitle b{
     font-size: 1.3em;
 }
 .company-1 img{
     height: 50px;
+}
+.tccna-logo{
+    height: 70px !important;
+    transform: translateY(5px);
 }
 
 footer{
@@ -1083,6 +1141,7 @@ footer{
     .event-Carousel .events-Products{
         width: 133.33%;
     }
+
     /*mapbox*/
     .mapbox{
         min-height: 800px;
@@ -1185,6 +1244,8 @@ footer{
     .companyimg img{
         height: 35px;
     }
+    
+
     .company-1 .companytitle b{
         font-size: 1.25em;
     }
@@ -1300,6 +1361,19 @@ footer{
     .signUp-info{
         line-height: 1.5;
     }
+
+    /*about*/
+    .about-form li{
+        flex-direction: row;
+        border-right: 0px solid #28539E;
+        gap: 2rem;
+            margin: 1rem 0 2rem 0;
+    }
+    .about-form li img{
+        width: 25%;
+        margin: auto;
+    }
+
     /*mapbox*/
     .mapbox{
         min-height: 800px;
