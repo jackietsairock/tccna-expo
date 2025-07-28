@@ -201,7 +201,7 @@ body {
     -webkit-writing-mode: vertical-lr;
     writing-mode: vertical-lr ;
     position: fixed;
-    bottom: 8vh;
+    bottom: 100px;
     right: 0.8em;
     outline: 4px solid #c1272d;
     z-index: 999;
