@@ -201,10 +201,10 @@ body {
     -webkit-writing-mode: vertical-lr;
     writing-mode: vertical-lr ;
     position: fixed;
-    bottom: 100px;
+    bottom: 30px;
     right: 0.8em;
     outline: 4px solid #c1272d;
-    z-index: 999;
+    z-index: 9999;
 }
 .ico-play{
     width: 1.2em;
