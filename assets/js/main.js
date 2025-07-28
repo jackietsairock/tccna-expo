@@ -213,6 +213,9 @@ $(document).ready(function() {
         // const title = $('input[name="Title"]').val();
         // const Company = $('select[name="Company"]').val();
         // const Industry = $('select[name="Industry"]').val();
+        const interesting = $('input[type="checkbox"][name="Interesting[]"]:checked').map(function() {
+            return this.value;
+        }).get();
         const agree = $('input[type=checkbox][name="agree"]').prop('checked');
         
         // 定義驗證结果
@@ -248,13 +251,20 @@ $(document).ready(function() {
             $("select[name='Gender']").focus();
             alert('請填寫稱呼');
         }
-    
 
          // 驗證電子郵件
         else if (!emailRegex.test(email)) {
             valid = false;
             $("input[type='email'][name='Email']").focus();
             alert('請填寫正確電子郵件');
+        }
+
+        // 請填寫有興趣了解
+        else if (interesting.length === 0) {
+            // 沒有勾選任何選項
+            valid = false;
+            $('input[type="checkbox"][name="Interesting[]"]').eq(0).focus();
+            alert('請填寫有興趣了解');
         }
         
         // // 驗證產年齡是否填写
