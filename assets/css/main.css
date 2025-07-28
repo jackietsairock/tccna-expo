@@ -226,7 +226,7 @@ body {
     background-color: #c1272d; 
     clip-path: polygon(100% 50%, 0 0, 0 100%);
 }
-.gototop{
+#gototop{
     right: 13px;
 }
 /* header*/
@@ -1335,7 +1335,7 @@ footer{
         background-size: cover;
     }
 
-    .gototop{
+    #gototop{
         right: 10px;
     }
     header .nav{
