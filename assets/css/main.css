@@ -226,6 +226,9 @@ body {
     background-color: #c1272d; 
     clip-path: polygon(100% 50%, 0 0, 0 100%);
 }
+.gototop{
+    right: 13px;
+}
 /* header*/
 header{
     height: auto;
@@ -1330,6 +1333,10 @@ footer{
     .ctiy-bg6{
         background: url(../images/city-6.jpg) center center no-repeat;
         background-size: cover;
+    }
+
+    .gototop{
+        right: 10px;
     }
     header .nav{
         display: none
