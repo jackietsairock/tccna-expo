@@ -1495,7 +1495,7 @@ footer{
     }
 
     .kv_box{
-        top: 3%;
+        top: 23%;
     }
     .kv-logo-2025 {
         top: -20%;
@@ -1600,6 +1600,9 @@ footer{
 @media screen and (max-width:685px){
     .map-info{
         padding: 1.5em 2em;
+    }
+    .kv_box{
+        top: 3%;
     }
 }
 @media (max-width: 680px) {
