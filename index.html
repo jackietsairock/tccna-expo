@@ -1165,7 +1165,13 @@
             }
                 
             // 更新 Swiper 的參數
-            if (typeof product1_swiper !== 'undefined') {
+            if (
+                typeof product1_swiper !== 'undefined' &&
+                product1_swiper &&
+                product1_swiper.params &&
+                product1_swiper.el &&
+                typeof product1_swiper.el.querySelectorAll === 'function'
+            ) {
                 product1_swiper.params.slidesPerView = slidesPerView;
                 product1_swiper.update();
             }
@@ -1186,7 +1192,13 @@
             }
                 
             // 更新 Swiper 的參數
-            if (typeof product2_swiper !== 'undefined') {
+            if (
+                typeof product2_swiper !== 'undefined' &&
+                product2_swiper &&
+                product2_swiper.params &&
+                product2_swiper.el &&
+                typeof product2_swiper.el.querySelectorAll === 'function'
+            ) {
                 product2_swiper.params.slidesPerView = slidesPerView;
                 product2_swiper.update();
             }

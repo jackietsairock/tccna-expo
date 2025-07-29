@@ -319,6 +319,7 @@ header .nav-link:focus,.nav-link:hover {
 }
 .kv_area.pc{
     min-height: 580px;
+    height: 100vh;
 }
 .kv_box{
     position: absolute;
