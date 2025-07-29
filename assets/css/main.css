@@ -1543,6 +1543,10 @@ footer{
         width: 35%;
         margin: auto;
     }
+    .about-icon{
+        width: 60px;
+        height: 60px;
+    }
 
     /*mapbox*/
     .mapbox{
