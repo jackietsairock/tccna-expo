@@ -11,9 +11,6 @@
     <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT" />
     <!--清cache -end-->
 
-    <!--禁止網頁收錄在搜尋引勤。外部測試站用-->
-    <meta name="robots" content="nofollow">
-
     <!--SEO-->
     <meta name="keywords" content="美國設廠、美國台積電、加拿大移民、美國留學">
     <meta name="description" content="一站掌握置產、設廠、創業、移民，開啟北美夢想之門！聚焦北美房產趨勢、創業機遇與移民政策，讓您的全球布局，從這裡啟程。">
@@ -138,17 +135,11 @@
 
         </header>
         <main>
-            <section class="kvbn d-flex justify-content-center align-items-center">
-                <div class="w-100 text-light p-2" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="kvbn-2025 col-5 col-sm-4 col-md-3 col-lg-2 mx-auto" >
-                        <img src="assets/images/img-2025.svg" alt="">
-                    </div>
-                    <div class="kvbn-slogan col-11 col-sm-9 col-md-8 col-lg-6  mx-auto" >
-                        <img src="assets/images/img-slogan.svg" alt="">
-                    </div>
-                    <div class=" fs-2 col-12  mt-1 mx-auto">
-                        <h3 class=" kvbn-slogan2 text-center">一站式掌握美加置產• 創業 •移民</h3>
-                    </div>
+            <section :class="['kvbn kv_area', { 'pc': windowWidth >= 1024 }, { 'mb': windowWidth < 1024}]">
+                <div class="kv_box" :style="{ width: setDivResize.width + 'px', height: setDivResize.height + 'px' }">
+                    <img class="kv-logo-2025" src="assets/images/img-2025.svg" alt="">
+                    <img class="kv-slogan" src="assets/images/img-slogan.svg" alt="">
+                    <h3 class=" kvbn-slogan2 text-center">一站式掌握美加置產• 創業 •移民</h3>
                     <div class="kvbn-time text-dark mt-2 text-center mx-auto">
                         <h3 class="rounded-pill  p-1 ps-4 pe-4">9/20 台北國際會議中心 </h3>
                     </div>
@@ -157,31 +148,6 @@
                             <p class>聚焦北美房產趨勢、創業機遇與移民政策，</p>
                             <p class>讓您的全球布局，從這裡啟程。</p>
                     </div>
-                    <div class="kvbn-vendor ">
-                        <div class="text-white fs-5 d-flex flex-wrap justify-content-center">
-                            <p class="pe-2">
-                                <span class="fw-bold text-bg-b">主辦單位</span>
-                                <span>北美洲台灣商會聯合總會</span>
-                            </p>
-                            <p>
-                                <span class="fw-bold text-bg-b">承辦單位</span>
-                                <span>今周刊</span>
-                            </p>
-                        </div>
-                            <!-- <div class=" text-white fs-6 ">
-                                <p>
-                                    <span class="fw-bold text-bg-b">協辦單位</span>
-                                    <span class="me-1">統一集團?</span>
-                                    <span class="me-1">經濟部能源署</span>
-                                    <span class="me-1">綠能科技產業推動中心</span>
-                                    <span class="me-1">信義房屋</span>
-                                    <span class="me-1">台灣地方創生基金會</span>
-                                    <span class="me-1">崇越集團</span>
-                                </p>
-                            </div> -->
-
-                    </div>
-
                 </div>
             </section>
             <!--關於博覽會-->
@@ -191,7 +157,7 @@
                         <div class="about-icon">                                        
                             <img src="assets/images/house.svg" alt="">
                         </div>
-                        <h3 class="bigTitle text-blue mt-0">
+                        <h3 class="bigTitle bigTitle_about text-blue mt-0">
                             關於博覽會
                         </h3>
                         <br>
@@ -201,7 +167,7 @@
                         </p>
                         <br>
                         <br>
-                        <h1 class="intro_title2 col-11 col-sm-8 col-md-7 col-lg-6 mx-auto fw-bold text-blue text-center text-bg-y">
+                        <h1 class="intro_title2 col-11 col-sm-8 col-md-7 col-lg-6 mx-auto fw-bold text-blue text-center">
                             五大非參加不可的理由:   
                         </h1>
                         <ul class="about-form col-11 col-sm-10 col-md-8 col-lg-8 row">

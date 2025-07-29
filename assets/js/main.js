@@ -1,8 +1,11 @@
-const { ref, onMounted, computed, watch, nextTick } = Vue;
+const { ref, onMounted, computed, watch, nextTick, onUnmounted } = Vue;
 const app = {
     setup() {
         const issue = ref([]);
         const speakers = ref([]);
+
+        const windowWidth = ref(0);
+        const setDivResize = ref({});
 
         const popupIsopen = ref(false);
         let swiper;       // 存 Swiper 實體
@@ -17,11 +20,18 @@ const app = {
         let intro = ref('');
 
         onMounted(() => {
+            handleResize();
+            window.addEventListener('resize', handleResize);
+
             fetch('assets/js/data.json')
                 .then(res => res.json())
                 .then(data => {
                     speakers.value = data.speaker;
                 });
+        });
+
+        onUnmounted(() => {
+            window.removeEventListener('resize', handleResize);
         });
 
         // 2. 資料一改動 -> DOM 更新完 -> 初始化 / 更新 Swiper
@@ -44,6 +54,49 @@ const app = {
                 });
             }
         });
+
+         function handleResize() {
+            windowWidth.value = getWindowWidth();
+            setDivResize.value = getDivResize('.kv_area');
+
+            // console.log('setDivResize:', setDivResize.value.width);
+            // console.log('setDivResize:', setDivResize.value.height);
+
+            function getWindowWidth() {
+                return window.innerWidth;
+            }
+
+            function getDivResize(parentClass) {
+
+                let parent_width = document.querySelector(parentClass).offsetWidth,
+                    parent_height = document.querySelector(parentClass).offsetHeight,
+                    width = 0,
+                    height = 0,
+                    windowWidth = window.innerWidth;
+
+                    // console.log(parent_width)
+
+                if(parent_width<parent_height+500){
+                    // console.log('寬小於高')
+                    // console.log(windowWidth)
+
+                    if(windowWidth <= 1024){
+                        width = parent_width/1.2;
+                        height = parent_width/1;
+                    }else{
+                        width = parent_width/1.3;
+                        height = parent_width/3.9;
+                    }
+                
+                }else{
+                    // console.log('寬大於高')
+                    width = parent_height/0.7;
+                    height = parent_height/2.1;
+                }
+
+                return { width, height };
+            }   
+        }
 
         function calcSlidesPerView () {
             const w = window.innerWidth;
@@ -73,7 +126,7 @@ const app = {
 
         return {
             issue, speakers,
-            speaker_popup, speaker_close, popupIsopen,
+            speaker_popup, speaker_close, popupIsopen, windowWidth, setDivResize,
             national, img, name, name_eng, title1, title2, academic, career, intro,
         };
     }
