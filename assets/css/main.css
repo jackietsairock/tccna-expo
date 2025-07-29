@@ -1490,31 +1490,34 @@ footer{
         line-height: 1.5;
     }
 
-
+    .kv_box{
+        top: 9%;
+    }
     .kv-logo-2025 {
         top: -20%;
         width: 40%;
     }
     .kv-slogan {
         top: -9%;
-        width: 100%;
+        width: 112%;
+        left: -4%;
     }
     .kvbn-slogan2 {
-        font-size: 3vw;
-        top: 25%;
+        font-size: 4vw;
+        top: 28%;
     }
     .kvbn-time {
-        top: 32%;
+        top: 38%;
     }
     .kvbn-time h3 {
-        font-size: 3vw;
+        font-size: 4vw;
     }
     .kvbn-text {
-        bottom: 29%;
+        bottom: 24%;
     }
     .kvbn-text p {
         line-height: 2;
-        font-size: 2.5vw;
+        font-size: 3vw;
     }
 
 
