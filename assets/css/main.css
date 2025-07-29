@@ -362,7 +362,7 @@ header .nav-link:focus,.nav-link:hover {
     background: url(../images/bg-1.jpg) fixed center center no-repeat;
     background-size: cover;
     padding-top: 76px;
-    overflow: auto;
+    overflow: hidden;
 }
 .kvbn-slogan{
     padding: 1.5em;
@@ -1200,6 +1200,9 @@ footer{
 @media screen and (max-width:1024px){
     .kv_area.mb{
         min-height: 1355px;
+    }
+    .kv_box{
+        top: 30%;
     }
     .kv-logo-2025 {
         top: -20%;
