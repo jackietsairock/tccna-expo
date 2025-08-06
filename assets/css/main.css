@@ -812,7 +812,7 @@ header .nav-link:focus,.nav-link:hover {
     border: 0;
 }
 .companyimg{
-    margin-bottom: 2%; margin-right:1% ;   
+    /* margin-bottom: 2%; margin-right:1% ;    */
 }
 .companyimg>div{
     width: auto;
