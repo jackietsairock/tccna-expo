@@ -723,7 +723,7 @@ header .nav-link:focus,.nav-link:hover {
 .speaker-info h5{
     text-align: center;
     /* padding-left: 0.5em; */
-    margin-bottom: 4px;
+    margin-bottom: 11px;
     margin-top: 0.5rem;
     font-weight: bolder;
 }
