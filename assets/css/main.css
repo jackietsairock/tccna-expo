@@ -717,13 +717,14 @@ header .nav-link:focus,.nav-link:hover {
     z-index: 100;
 }
 .speaker-info span{
-    text-align: left;
-    padding-left: 0.5em;
+    text-align: center;
+    /* padding-left: 0.5em; */
 }
 .speaker-info h5{
-    text-align: left;
-    padding-left: 0.5em;
+    text-align: center;
+    /* padding-left: 0.5em; */
     margin-bottom: 4px;
+    margin-top: 0.5rem;
     font-weight: bolder;
 }
 .speaker-info a{
@@ -858,6 +859,10 @@ header .nav-link:focus,.nav-link:hover {
 }
 .logo-zephyr{
     height: 60px !important;
+}
+
+.logo_notice_text{
+    font-size: 0.7em;
 }
 
 footer{
@@ -1335,10 +1340,10 @@ footer{
         font-size: 0.9em;  
     }
     .speaker-info span{
-        padding-left: 0.4em;
+        /* padding-left: 0.4em; */
     }
     .speaker-info h5{
-        padding-left: 0.4em;
+        /* padding-left: 0.4em; */
     }
      /*classes*/
     .classes-form{
