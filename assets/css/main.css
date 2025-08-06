@@ -832,6 +832,9 @@ header .nav-link:focus,.nav-link:hover {
 .company-1 img{
     height: 50px;
 }
+.logo-bt{
+    height: 43px !important;
+}
 .tccna-logo{
     height: 62px !important;
 }
