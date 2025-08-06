@@ -698,6 +698,7 @@ header .nav-link:focus,.nav-link:hover {
 .speakerbox>div{
     margin: 4% auto;
 }
+
 .speaker::before{
     content: "";
     position: absolute;
@@ -736,7 +737,8 @@ header .nav-link:focus,.nav-link:hover {
     opacity: 0;
 }
 
-.speaker-info:hover a{
+/*more button 關閉*/
+/* .speaker-info:hover a{
     display: block;
     opacity: 1;
     cursor: pointer;
@@ -745,7 +747,7 @@ header .nav-link:focus,.nav-link:hover {
 .speakerbox>div>.speaker:hover::before{
     height: 25%;
 
-}
+} */
 
 .signUpsheet>div {
 }
@@ -832,7 +834,27 @@ header .nav-link:focus,.nav-link:hover {
 }
 .tccna-logo{
     height: 62px !important;
-    transform: translateY(5px);
+}
+.logo-canada{
+    height: 80px !important;
+}
+.logo-RTG{
+    height: 70px !important;
+}
+.logo-PYC{
+    height: 40px !important;
+}
+.logo-seamless{
+    height: 25px !important;
+}
+.logo-chen{
+    height: 62px !important;
+}
+.logo-covenant{
+    height: 65px !important;
+}
+.logo-zephyr{
+    height: 60px !important;
 }
 
 footer{
@@ -1055,7 +1077,7 @@ footer{
 .speaker_slider_area{
     position: relative;
     display: block;
-    width: 100%;
+    width: 60%;
 }
 .speaker_swiper .speaker_slider_box .speaker_swiper {
     width: 100%;
@@ -1615,6 +1637,9 @@ footer{
     }
     .kv_box{
         top: 25%;
+    }
+    .speaker_slider_area{
+        width: 100%;
     }
 }
 @media (max-width: 680px) {

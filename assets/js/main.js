@@ -100,7 +100,8 @@ const app = {
 
         function calcSlidesPerView () {
             const w = window.innerWidth;
-            return w < 680 ? 1 : w < 768 ? 2 : w < 1000 ? 3 : 4;
+            // return w < 680 ? 1 : w < 768 ? 2 : w < 1000 ? 3 : 4;
+            return w < 680 ? 1 : w < 768 ? 2 : w < 1000 ? 2 : 2;
         }
 
         //講師彈跳視窗
